@@ -1,0 +1,58 @@
+#
+# This file is part of the LibreOffice project.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#
+# This file incorporates work covered by the following license notice:
+#
+#   Licensed to the Apache Software Foundation (ASF) under one or more
+#   contributor license agreements. See the NOTICE file distributed
+#   with this work for additional information regarding copyright
+#   ownership. The ASF licenses this file to you under the Apache
+#   License, Version 2.0 (the "License"); you may not use this file
+#   except in compliance with the License. You may obtain a copy of
+#   the License at http://www.apache.org/licenses/LICENSE-2.0 .
+#
+
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Icon=libreoffice-startcenter
+Type=Application
+Categories=Office;X-Red-Hat-Base;X-SuSE-Core-Office;X-MandrivaLinux-Office-Other;
+Exec=libreoffice %U
+MimeType=application/vnd.openofficeorg.extension;
+Name=LibreOffice 办公套件
+GenericName=Office
+GenericName[it]=Ufficio
+GenericName[es]=Office
+GenericName[zh_CN]=办公室
+GenericName[ru]=Офис
+GenericName[nl]=Kantoor
+GenericName[ar]=مكتب
+GenericName[en]=Office
+GenericName[fr]=Bureau
+GenericName[de]=Office
+GenericName[ja]=Office
+GenericName[cs]=Kancelář
+GenericName[pt_BR]=Office
+Comment=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
+Comment[it]=La suite di produttività per l'ufficio compatibile con il formato standard aperto ODF. Supportata da The Document Foundation.
+Comment[es]=El conjunto de aplicaciones de productividad ofimática compatible con el formato de documentos abierto y estandarizado ODF. Con el apoyo de The Document Foundation.
+Comment[zh_CN]=本办公生产套件与开放的 ODF 文档格式标准兼容。由 The Document Foundation 提供支持。
+Comment[ru]=Офисный пакет совместим с открытым и стандартизованным форматом документов ODF. Поддерживается The Document Foundation.
+Comment[nl]=De suite voor productiviteit op kantoor, compatibel met het open en gestandaardiseerde ODF documentformat. Ondersteund door \"The Document Foundation\".
+Comment[ar]=الحقيبة اﻻنتاجية المكتبية متوافقة مع صيغ الوثائق المفتوحة المدعومة من مؤسسة الوثائق المفتوحة المصدر.
+Comment[en]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
+Comment[fr]=La suite de productivité bureautique compatible avec le format de document ODF standardisé et ouvert. Prise en charge par The Document Foundation.
+Comment[de]=Die produktive Bürosoftware ist kompatibel zu dem offenen und standardisierten OpenDocument Format (ODF). Unterstützt von The Document Foundation.
+Comment[ja]=オープンで標準化された ODF ドキュメント形式に準拠したオフィススイートです。The Document Foundation によってサポートされています。
+Comment[cs]=Kancelářský balík kompatibilní s otevřeným a standardizovaným formátem dokumentů ODF. Podporován The Document Foundation.
+Comment[pt_BR]=A suite de produtividade de escritório compatível com o formato aberto e padronizado ODF. Com o apoio da The Document Foundation.
+StartupNotify=true
+X-GIO-NoFuse=true
+StartupWMClass=libreoffice-startcenter
+X-KDE-Protocols=file,http,smb,ftp,webdav
+Path=

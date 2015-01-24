@@ -1,0 +1,66 @@
+#
+# This file is part of the LibreOffice project.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#
+# This file incorporates work covered by the following license notice:
+#
+#   Licensed to the Apache Software Foundation (ASF) under one or more
+#   contributor license agreements. See the NOTICE file distributed
+#   with this work for additional information regarding copyright
+#   ownership. The ASF licenses this file to you under the Apache
+#   License, Version 2.0 (the "License"); you may not use this file
+#   except in compliance with the License. You may obtain a copy of
+#   the License at http://www.apache.org/licenses/LICENSE-2.0 .
+#
+
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Icon=libreoffice-writer
+Type=Application
+Categories=Office;WordProcessor;
+Exec=libreoffice --writer %U
+MimeType=application/vnd.oasis.opendocument.text;application/vnd.oasis.opendocument.text-template;application/vnd.oasis.opendocument.text-web;application/vnd.oasis.opendocument.text-master;application/vnd.sun.xml.writer;application/vnd.sun.xml.writer.template;application/vnd.sun.xml.writer.global;application/msword;application/vnd.ms-word;application/x-doc;application/x-hwp;application/rtf;text/rtf;application/vnd.wordperfect;application/wordperfect;application/vnd.lotus-wordpro;application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/vnd.ms-word.document.macroenabled.12;application/vnd.openxmlformats-officedocument.wordprocessingml.template;application/vnd.ms-word.template.macroenabled.12;application/vnd.ms-works;application/vnd.stardivision.writer-global;application/x-extension-txt;application/x-t602;text/plain;
+Name=LibreOffice 文字编辑
+GenericName=Word Processor
+GenericName[it]=Elaboratore di testo
+GenericName[es]=Procesador de texto
+GenericName[zh_CN]=字处理器
+GenericName[ru]=Текстовый процессор
+GenericName[nl]=Tekstverwerker
+GenericName[ar]=معالج المستندات
+GenericName[en]=Word Processor
+GenericName[fr]=Traitement de texte
+GenericName[de]=Textverarbeitung
+GenericName[ja]=ワードプロセッサ
+GenericName[cs]=Textový procesor
+GenericName[pt_BR]=Editor de texto
+Comment=Create and edit text and graphics in letters, reports, documents and Web pages by using Writer.
+Comment[it]=Usando Writer, potete creare e modificare il testo e le immagini di lettere, rapporti, documenti e pagine Web.
+Comment[es]=Cree y edite texto y gráficos en cartas, informes, documentos y páginas Web con Writer.
+Comment[zh_CN]=使用 Writer 创建并编辑信函、报表、文档和网页中的文本和图形。
+Comment[ru]=Создание и редактирование текста и рисунков в письмах, отчётах, документах или веб-страницах.
+Comment[nl]=Met Writer kunt u tekst en afbeeldingen in brieven, rapporten, documenten en webpagina's maken en bewerken.
+Comment[ar]=إنشاء النصوص والرسومات في الخطابات، والتقارير، والمستندات وصفحات ويب وتحريرها باستخدام رايتر.
+Comment[en]=Create and edit text and graphics in letters, reports, documents and Web pages by using Writer.
+Comment[fr]=Writer - Création et édition de textes et d'images pour courriers, rapports, documents et pages Web.
+Comment[de]=Erstellen und bearbeiten von Text und Grafiken in Briefen, Reports, Dokumenten und Web-Seiten - Writer macht's möglich.
+Comment[ja]=Writer を使用して、レター、レポート、ドキュメントおよび Web ページのテキストおよび図を作成および編集します。
+Comment[cs]=Writer umožňuje vytvářet a upravovat text a grafiku v dopisech, sestavách, dokumentech a webových stránkách.
+Comment[pt_BR]=Crie e edite textos e figuras em cartas, relatórios, documentos e páginas da Web por meio do Writer.
+StartupNotify=true
+X-GIO-NoFuse=true
+Keywords=Text;Letter;Fax;Document;OpenDocument Text;Microsoft Word;Microsoft Works;Lotus WordPro;OpenOffice Writer;CV;odt;doc;docx;rtf;
+InitialPreference=5
+X-Ayatana-Desktop-Shortcuts=X-New
+StartupWMClass=libreoffice-writer
+X-KDE-Protocols=file,http,smb,ftp,webdav
+Path=
+
+[Desktop Action NewDocument]
+Name=New Document
+Exec=libreoffice --writer %U
+OnlyShowIn=Unity;

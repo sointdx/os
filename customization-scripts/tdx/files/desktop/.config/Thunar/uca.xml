@@ -1,0 +1,31 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>在此打开终端</name>
+	<unique-id>1410086264725833-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>自定义动作示例</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>Thunar</icon>
+	<name>以root身份打开此目录</name>
+	<unique-id>1412313131437496-2</unique-id>
+	<command>gksu /usr/bin/thunar %f</command>
+	<description>用最高权限打开</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>accessories-text-editor</icon>
+	<name>以root身份打开此文件</name>
+	<unique-id>1412313258247619-3</unique-id>
+	<command>gksu /usr/bin/gedit %f</command>
+	<description>用最高权限打开文本文件</description>
+	<patterns>*</patterns>
+	<text-files/>
+</action>
+</actions>

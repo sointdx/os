@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Simple Scan 扫描易
+Comment=扫描文档
+Exec=simple-scan
+Icon=scanner
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Graphics;Scanning;
+X-GNOME-Gettext-Domain=simple-scan
+Path=

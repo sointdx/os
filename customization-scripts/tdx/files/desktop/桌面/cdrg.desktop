@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=cdrg
+Name[zh_CN]=多刻录机
+Comment=cdrg
+Exec=/usr/bin/cdrg
+Icon=cdrg
+Terminal=false
+Type=Application
+Categories=AudioVideo;Multiple Recorder;Utility

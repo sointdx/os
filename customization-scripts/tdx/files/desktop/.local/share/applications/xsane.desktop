@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=XSane 图像扫描
+Comment=A program to work with scanner. Can be used as a scanning, copier, OCR, fax tools.
+Exec=xsane
+Icon=scanner
+Terminal=false
+Type=Application
+Categories=GTK;Graphics;RasterGraphics;Scanning;OCR;2DGraphics;
+StartupNotify=true
+X-Ubuntu-Gettext-Domain=xsane
+Path=

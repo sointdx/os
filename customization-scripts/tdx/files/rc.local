@@ -1,0 +1,36 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+#https://www.tiandixing.org/viewtopic.php?f=83&t=137818#p772107
+#让防火墙开机的时候开启(双重保护)
+iptables-restore < /etc/iptables.saved
+if ! grep "iptables-restore" /etc/network/interfaces ; then
+    echo "pre-up iptables-restore < /etc/iptables.saved" >> /etc/network/interfaces
+fi
+
+#防止误连正义网站
+if ! grep "#防止误连正义网站" /etc/hosts ; then
+    echo -e "\n\n#防止误连正义网站" >> /etc/hosts
+    cat /etc/hosts.append >> /etc/hosts
+fi
+
+#设置/etc/apt/sources.list
+if grep "cn.archive" /etc/apt/sources.list ; then
+cat > /etc/apt/sources.list << EOF
+deb http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse
+EOF
+fi
+
+exit 0

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=GDebi 软件包安装
+GenericName=Package Installer
+Comment=安装和查看软件包
+Exec=gdebi-gtk %f
+Icon=gnome-mime-application-x-deb
+Terminal=false
+Type=Application
+Categories=System;
+MimeType=application/x-deb;application/x-debian-package;
+NotShowIn=KDE;
+X-Ubuntu-Gettext-Domain=gdebi
+StartupNotify=true
+Path=

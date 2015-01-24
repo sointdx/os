@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=光盘刻录
+Comment=CD 刻录程序
+Exec=k3b %U
+Icon=k3b
+Path=
+Terminal=false
+StartupNotify=true

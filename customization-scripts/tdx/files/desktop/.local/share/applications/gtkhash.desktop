@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=GtkHash MD5/SHA值
+Comment=Compute message digests and checksums
+Comment[de]=Berechnen von Prüfsummen
+Exec=gtkhash
+Icon=gtkhash
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;Utility;
+Path=

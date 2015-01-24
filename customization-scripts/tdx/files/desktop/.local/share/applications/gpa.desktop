@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=gpa 密钥管理
+Name[sv]=gpa
+Name[en_US.ISO8859-1]=gpa
+GenericName=GNU Privacy Assistant
+GenericName[sv]=GNU Integritets-hjälpreda
+GenericName[en_US.ISO8859-1]=GNU Privacy Assistant
+Exec=gpa
+Icon=gpa
+Terminal=false
+Encoding=UTF-8
+Type=Application
+Categories=GTK;Application;Security;Utility;
+Comment=
+Path=
+StartupNotify=false

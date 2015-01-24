@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=启动IBus输入法框架
+GenericName=Input Method Framework
+Comment=启动IBus 输入法框架
+Exec=ibus-daemon --xim
+Icon=ibus
+Terminal=false
+Type=Application
+Categories=System;Utility;
+X-GNOME-Autostart-Phase=Applications
+X-GNOME-AutoRestart=false
+X-GNOME-Autostart-Notify=true
+X-KDE-autostart-after=panel
+X-Ubuntu-Gettext-Domain=ibus10
+Path=
+StartupNotify=false

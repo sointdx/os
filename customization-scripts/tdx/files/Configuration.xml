@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TrueCrypt>
+   <configuration>
+      <config key="CloseSecurityTokenSessionsAfterMount">1</config>
+      <config key="DismountOnInactivity">1</config>
+      <config key="DismountOnLogOff">1</config>
+      <config key="DismountOnPowerSaving">1</config>
+      <config key="DismountOnScreenSaver">1</config>
+      <config key="FilesystemOptions">utf8</config>
+      <config key="ForceAutoDismount">1</config>
+      <config key="MaxVolumeIdleTime">30</config>
+      <config key="WipeCacheOnClose">1</config>
+   </configuration>
+</TrueCrypt>
