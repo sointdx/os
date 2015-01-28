@@ -87,14 +87,15 @@ clean() {
 regenerate() {
     if [ -e /mnt/old ] || [ -e /mnt/new ];then
         echo "重新制作失败，检测到/mnt/old或者/mnt/new目录已经存在"
-        echo "请检查这两个目录是否有重要文件，并手动删除目录后重新运行命令生成"
+        echo "请检查这两个目录是否有重要文件，并手动删除目录后重新运行命令生成镜像"
         exit
     fi
 
     mkdir -p /mnt/old
     mkdir -p /mnt/new
-    if [ -f ${TMP_DIR}/customization-scripts/remaster-iso/livecd.iso ]; then
-        mount ${TMP_DIR}/customization-scripts/remaster-iso/livecd.iso /mnt/old
+ter-new-files
+    if [ -f ${TMP_DIR}/remaster-new-files/livecd.iso ]; then
+        mount ${TMP_DIR}/remaster-new-files/livecd.iso /mnt/old
         echo "正在重新制作镜像使系统支持没有物理地址扩展功能的电脑..."
     else
         echo "重新制作失败"
