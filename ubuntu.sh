@@ -48,7 +48,7 @@ check_depend() {
 #初始化，安装所需的软件UCK
 initialize() {
     apt-get update
-    apt-get -y install uck
+    apt-get -y install uck syslinux
     cp -f ${TMP_DIR}/extra-files/remaster-live-cd.sh /usr/lib/uck/remaster-live-cd.sh
     if [ ! -x /usr/bin/uck-remaster ]; then
         chmod a+x /usr/bin/uck-remaster
