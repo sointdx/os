@@ -68,7 +68,7 @@ customize() {
 clean() {
     echo "正在清除脚本自动产生的文件..."
     #rm -rf ${TMP_DIR}/remaster-apt-cache ${TMP_DIR}/remaster-new-files
-    #rm -rf ${TMP_DIR}/remaster-iso 
+    rm -rf ${TMP_DIR}/remaster-iso 
     #rm -rf ${TMP_DIR}/remaster-root ${TMP_DIR}/remaster-root-home
     rm -rf ${TMP_DIR}/customization-scripts/tdx/{*.deb,*.vbox-extpack}
     #rm -rf ${TMP_DIR}/customization-scripts/tdx/FontPack*.tar.gz
@@ -93,7 +93,6 @@ regenerate() {
 
     mkdir -p /mnt/old
     mkdir -p /mnt/new
-ter-new-files
     if [ -f ${TMP_DIR}/remaster-new-files/livecd.iso ]; then
         mount ${TMP_DIR}/remaster-new-files/livecd.iso /mnt/old
         echo "正在重新制作镜像使系统支持没有物理地址扩展功能的电脑..."
