@@ -1,6 +1,8 @@
 #!/bin/bash
 
 TMP_DIR=`dirname $0`
+#改成绝对路径
+TMP_DIR=`cd ${TMP_DIR};pwd`
 OPERATE=$1
 ISO_NAME="ubuntu-14.04.1-desktop-i386.iso"
 ISO_NONPAE="ubuntu-14.04.1-desktop-i386-custom.iso"
