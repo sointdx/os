@@ -33,4 +33,9 @@ deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe mu
 EOF
 fi
 
+#开机自动判断并创建swap
+if ! grep "/home/swap" /etc/fstab; then
+    bash /opt/tdx/create_swap.sh
+fi
+
 exit 0

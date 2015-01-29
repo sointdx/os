@@ -287,4 +287,8 @@ cp files/hosts /etc/hosts.append
 #的文件，放到系统安装之后启动的时候修改这两个文件。
 #https://www.tiandixing.org/viewtopic.php?f=83&t=137818#p772107
 cp files/rc.local /etc/rc.local
+
+#开机自动判断并创建swap分区
+mkdir -p /opt/tdx/
+cp files/create_swap.sh /opt/tdx/create_swap.sh
 #!!!! this has to be put in the END!!! Otherwise will have wierd connection problems.
