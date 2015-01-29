@@ -146,10 +146,10 @@ sed -i 's/UTC=yes/UTC=no/' /etc/default/rcS
 
 # 安装最新的flash
 # http://tiandixing.org/viewtopic.php?f=83&t=125035&p=703877&hilit=flashplugin+installer#p703175
-if [ ! -f adobe-flashplugin_11.2.202.429-0trusty1_i386.deb ]; then
-    wget http://archive.canonical.com/pool/partner/a/adobe-flashplugin/adobe-flashplugin_11.2.202.429-0trusty1_i386.deb
+if [ ! -f adobe-flashplugin_11.2.202.440-0trusty1_i386.deb ]; then
+    wget http://archive.canonical.com/pool/partner/a/adobe-flashplugin/adobe-flashplugin_11.2.202.440-0trusty1_i386.deb
 fi
-dpkg -i adobe-flashplugin_11.2.202.406-0trusty1_i386.deb 
+dpkg -i adobe-flashplugin_11.2.202.440-0trusty1_i386.deb
 
 # Virtualbox
 apt-get -y install virtualbox
