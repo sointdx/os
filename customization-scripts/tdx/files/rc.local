@@ -38,4 +38,10 @@ if ! grep "/home/swap" /etc/fstab; then
     bash /opt/tdx/create_swap.sh
 fi
 
+#开机第一次111proxy不存在的时候,设置apt经过代理,用户想取消代理可以删除111proxy中的内容
+if [ ! -e /etc/apt/apt.conf.d/111proxy ]; then
+    echo "Acquire::http::proxy \"http://127.0.0.1:8580\";" | tee /etc/apt/apt.conf.d/111proxy
+    echo "Acquire::https::proxy \"http://127.0.0.1:8580\";" | tee -a /etc/apt/apt.conf.d/111proxy
+fi
+
 exit 0
