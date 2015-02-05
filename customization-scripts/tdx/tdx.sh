@@ -72,10 +72,10 @@ touch AUTHORS NEWS.gz README.gz copyright changelog.Debian.gz
 apt-get -y install --no-install-recommends libntrack0
 cd $p
 
-apt-get install -y --no-install-recommends k3b
+#apt-get install -y --no-install-recommends k3b
 # k3b 中文翻译
 # https://tiandixing.org/viewtopic.php?f=83&t=126432#p711511
-apt-get install -y --no-install-recommends language-pack-kde-zh-hans
+#apt-get install -y --no-install-recommends language-pack-kde-zh-hans
 #安装多刻录机软件
 gdebi --n deb/cdrecord_3.01a22-0ubuntu1~trusty~cdrtoolsppa4_i386.deb
 gdebi --n deb/cdrg_1.1.2-0tdx1_i386.deb
