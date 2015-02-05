@@ -227,6 +227,9 @@ apt-get -y install --no-install-recommends gimp gimp-help-common
 #用图形界面更改密码
 apt-get -y install gnome-system-tools --no-install-recommends
 
+#支持exfat文件系统
+apt-get -y install exfat-utils exfat-fuse
+
 # PDF 软件
 # https://tiandixing.org/viewtopic.php?f=83&t=122592#p702647
 if [ ! -f AdobeReader_chs-8.1.7-1.i386.deb ]; then
