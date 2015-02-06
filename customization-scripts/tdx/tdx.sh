@@ -259,9 +259,12 @@ glib-compile-schemas /usr/share/glib-2.0/schemas/
 #设置gedit不自动产生备份文件
 #https://www.tiandixing.org/viewtopic.php?f=83&t=167771#p932684
 cat >> /usr/share/glib-2.0/schemas/10_gnome.gedit.gschema.override <<EOF
+
 [org.gnome.gedit.preferences.editor]
 create-backup-copy=false
 EOF
+#使设置生效
+glib-compile-schemas /usr/share/glib-2.0/schemas/
 
 #设置iptables防火墙
 iptables -F
