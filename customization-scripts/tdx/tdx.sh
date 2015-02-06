@@ -261,6 +261,8 @@ glib-compile-schemas /usr/share/glib-2.0/schemas/
 cat >> /usr/share/glib-2.0/schemas/10_gnome.gedit.gschema.override <<EOF
 
 [org.gnome.gedit.preferences.editor]
+auto-save=true
+auto-save-interval=5
 create-backup-copy=false
 EOF
 #使设置生效
