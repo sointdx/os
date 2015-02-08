@@ -1,0 +1,11 @@
+#gedit打开windows中创建的文件，内容有时会乱码
+gsettings set org.gnome.gedit.preferences.encodings auto-detected "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'BIG5', 'CURRENT', 'UTF-16']"
+gsettings set org.gnome.gedit.preferences.encodings shown-in-menu "['UTF-8', 'GB18030', 'GB2312', 'GBK', 'BIG5', 'CURRENT', 'UTF-16']"
+
+#使gedit在保存前不自动创建后缀为～的备份文件，并每5分钟自动保存一次
+gsettings set org.gnome.gedit.preferences.editor auto-save true
+gsettings set org.gnome.gedit.preferences.editor auto-save-interval 5
+gsettings set org.gnome.gedit.preferences.editor create-backup-copy false
+
+#gtkhash默认显示md5、sha1和sha512
+gsettings set apps.gtkhash hash-functions "['MD5', 'SHA1', 'SHA512']"
