@@ -11,6 +11,6 @@ cp light-blue.jpg /usr/share/backgrounds/xfce/light-blue.jpg
 cp xfce4-whiskermenu-plugin.mo /usr/share/locale/zh_CN/LC_MESSAGES/
 rm $HOME_DIR/examples.desktop
 #更改gedit和gtkhash的默认设置
-cp ~/.profile ~/.gsettings-override $HOME_DIR
+cp .profile .gsettings-override $HOME_DIR
 chmod a+x $HOME_DIR/.gsettings-override
 cd ../..
