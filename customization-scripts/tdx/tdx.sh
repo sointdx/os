@@ -168,6 +168,9 @@ VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.3.10-93012.vbox
 
 # 视频播放器
 apt-get install -y --no-install-recommends vlc
+# 使vlc不自动联网下载所播放文件的专辑等信息
+mkdir -p /etc/skel/.config/vlc/
+cp $WD_DIR/files/vlcrc /etc/skel/.config/vlc/vlcrc
 
 #安装fcitx拼音、双拼和五笔
 apt-get -y install fcitx-pinyin fcitx-table-wubi
