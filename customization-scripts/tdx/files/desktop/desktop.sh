@@ -13,4 +13,6 @@ rm $HOME_DIR/examples.desktop
 #更改gedit和gtkhash的默认设置
 cp .profile .gsettings-override $HOME_DIR
 chmod a+x $HOME_DIR/.gsettings-override
+#livecd中桌面的安装启动器去掉ubuntu字样 
+cp ubiquity.desktop /usr/share/applications/
 cd ../..
