@@ -8,7 +8,7 @@ fi
 mem_size=`free | grep -i mem | awk '{print $2}'`
 swap_size=`free | grep -i swap | awk '{print $2}'`
 
-if [ $mem_size -lt 12097152 ] && [ 0 == $swap_size ]; then
+if [ $mem_size -lt 2097152 ] && [ 0 == $swap_size ]; then
     dd if=/dev/zero of=/home/swap bs=1M count=2048
     if [ -e /home/swap ]; then
         mkswap /home/swap

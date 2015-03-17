@@ -18,7 +18,7 @@ export WD_DIR=/tmp/customization-scripts/tdx
 # backports：backports 的团队则认为最好的更新策略是 security 策略加上新版本的软件（包括候选版本的）。但不会由Ubuntu security team审查和更新。
 # update：修复严重但不影响系统安全运行的漏洞，这类补丁在经过QA人员记录和验证后才提供，和security那类一样低风险。
 # proposed：update类的测试部分，仅建议提供测试和反馈的人进行安装。
-#xf
+#
 # 个人认为：
 # 1.重要的服务器：用发行版默认的、security 
 # 2.当有要较新软件包才行能运作的服务器：用发行版默认的、 security、（backports 还是不适合） 
@@ -72,10 +72,10 @@ touch AUTHORS NEWS.gz README.gz copyright changelog.Debian.gz
 apt-get -y install --no-install-recommends libntrack0
 cd $p
 
-apt-get install -y --no-install-recommends k3b
+#apt-get install -y --no-install-recommends k3b
 # k3b 中文翻译
 # https://tiandixing.org/viewtopic.php?f=83&t=126432#p711511
-apt-get install -y --no-install-recommends language-pack-kde-zh-hans
+#apt-get install -y --no-install-recommends language-pack-kde-zh-hans
 #安装多刻录机软件
 gdebi --n deb/cdrecord_3.01a22-0ubuntu1~trusty~cdrtoolsppa4_i386.deb
 gdebi --n deb/cdrg_1.1.2-0tdx1_i386.deb
@@ -146,8 +146,8 @@ sed -i 's/UTC=yes/UTC=no/' /etc/default/rcS
 
 # 安装最新的flash
 # http://tiandixing.org/viewtopic.php?f=83&t=125035&p=703877&hilit=flashplugin+installer#p703175
-if [ ! -f adobe-flashplugin_11.2.202.440-0trusty1_i386.deb ]; then
-    wget http://archive.canonical.com/pool/partner/a/adobe-flashplugin/adobe-flashplugin_11.2.202.440-0trusty1_i386.deb
+if [ ! -f adobe-flashplugin_11.2.202.442-0trusty1_i386.deb ]; then
+    wget http://archive.canonical.com/pool/partner/a/adobe-flashplugin/adobe-flashplugin_11.2.202.442-0trusty1_i386.deb
 fi
 dpkg -i adobe-flashplugin_11.2.202.440-0trusty1_i386.deb
 
@@ -168,6 +168,9 @@ VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.3.10-93012.vbox
 
 # 视频播放器
 apt-get install -y --no-install-recommends vlc
+# 使vlc不自动联网下载所播放文件的专辑等信息
+mkdir -p /etc/skel/.config/vlc/
+cp $WD_DIR/files/vlcrc /etc/skel/.config/vlc/vlcrc
 
 #安装fcitx拼音、双拼和五笔
 apt-get -y install fcitx-pinyin fcitx-table-wubi
@@ -227,6 +230,9 @@ apt-get -y install --no-install-recommends gimp gimp-help-common
 #用图形界面更改密码
 apt-get -y install gnome-system-tools --no-install-recommends
 
+#支持exfat文件系统
+apt-get -y install exfat-utils exfat-fuse
+
 # PDF 软件
 # https://tiandixing.org/viewtopic.php?f=83&t=122592#p702647
 if [ ! -f AdobeReader_chs-8.1.7-1.i386.deb ]; then
@@ -256,9 +262,14 @@ glib-compile-schemas /usr/share/glib-2.0/schemas/
 #设置gedit不自动产生备份文件
 #https://www.tiandixing.org/viewtopic.php?f=83&t=167771#p932684
 cat >> /usr/share/glib-2.0/schemas/10_gnome.gedit.gschema.override <<EOF
+
 [org.gnome.gedit.preferences.editor]
+auto-save=true
+auto-save-interval=5
 create-backup-copy=false
 EOF
+#使设置生效
+glib-compile-schemas /usr/share/glib-2.0/schemas/
 
 #设置iptables防火墙
 iptables -F

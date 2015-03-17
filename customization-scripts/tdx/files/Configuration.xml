@@ -8,7 +8,6 @@
       <config key="DismountOnScreenSaver">1</config>
       <config key="FilesystemOptions">utf8</config>
       <config key="ForceAutoDismount">1</config>
-      <config key="MaxVolumeIdleTime">30</config>
       <config key="WipeCacheOnClose">1</config>
    </configuration>
 </TrueCrypt>
