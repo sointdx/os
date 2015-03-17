@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 HOME_DIR=/etc/skel
 cd files/desktop

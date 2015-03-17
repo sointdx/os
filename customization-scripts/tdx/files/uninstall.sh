@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # https://tiandixing.org/viewtopic.php?f=83&t=124748
 #对对碰mahjongg() 纸牌王 数独 扫雷 游戏数据(gnome-games-data)

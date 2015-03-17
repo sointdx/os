@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 TMP_DIR=`dirname $0`
 #改成绝对路径
