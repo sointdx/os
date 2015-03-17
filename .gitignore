@@ -1,6 +1,6 @@
-customization-scripts/tdx/*.deb
-customization-scripts/tdx/FontPack81_cht_i486-linux.tar.gz
-customization-scripts/tdx/Oracle_VM_VirtualBox_Extension_Pack-4.3.10-93012.vbox-extpack
+#customization-scripts/tdx/*.deb
+#customization-scripts/tdx/FontPack81_cht_i486-linux.tar.gz
+#customization-scripts/tdx/Oracle_VM_VirtualBox_Extension_Pack-4.3.10-93012.vbox-extpack
 remaster-apt-cache/
 remaster-iso/
 remaster-new-files/
