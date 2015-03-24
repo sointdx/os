@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 TMP_DIR=`dirname $0`
 #改成绝对路径
@@ -49,7 +49,16 @@ check_depend() {
 initialize() {
     apt-get update
     apt-get -y install uck syslinux
-    cp -f ${TMP_DIR}/extra-files/remaster-live-cd.sh /usr/lib/uck/remaster-live-cd.sh
+    
+    if [ -f /usr/lib/uck/remaster-live-cd.sh ] && [ -f /usr/lib/uck/remaster-live-cd.bak ]; then
+        changes=`diff /usr/lib/uck/remaster-live-cd.sh /usr/lib/uck/remaster-live-cd.bak`
+    else
+        b_patched=false
+    fi
+    if [ ! -z "${changes}" ] || ! ${b_patched}; then
+        patch -b /usr/lib/uck/remaster-live-cd.sh < ${TMP_DIR}/extra-files/remaster-live-cd.patch
+        cp /usr/lib/uck/remaster-live-cd{.sh,.bak}
+    fi
     if [ ! -x /usr/bin/uck-remaster ]; then
         chmod a+x /usr/bin/uck-remaster
     fi
