@@ -50,6 +50,7 @@ initialize() {
     apt-get update
     apt-get -y install uck syslinux
     
+    #给UCK打补丁
     if [ -f /usr/lib/uck/remaster-live-cd.sh ] && [ -f /usr/lib/uck/remaster-live-cd.bak ]; then
         changes=`diff /usr/lib/uck/remaster-live-cd.sh /usr/lib/uck/remaster-live-cd.bak`
     else
@@ -59,8 +60,36 @@ initialize() {
         patch -b /usr/lib/uck/remaster-live-cd.sh < ${TMP_DIR}/extra-files/remaster-live-cd.patch
         cp /usr/lib/uck/remaster-live-cd{.sh,.bak}
     fi
+
     if [ ! -x /usr/bin/uck-remaster ]; then
         chmod a+x /usr/bin/uck-remaster
+    fi
+    #复制定制时需要的文件
+    cp -f /usr/lib/uck/gui.sh ${TMP_DIR}/customization-scripts/gui.sh
+    cp -f /usr/lib/uck/customization-profiles/localized_cd/customize_iso ${TMP_DIR}/customization-scripts/customize_iso
+    if [ ! -f ${TMP_DIR}/customization-scripts/customize ]; then
+        cp -f /usr/lib/uck/customization-profiles/localized_cd/customize ${TMP_DIR}/customization-scripts/customize
+        cat >> ${TMP_DIR}/customization-scripts/customize << EOF
+
+cd /tmp/customization-scripts/tdx
+#set locale
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN:en_US:en
+export LC_CTYPE="zh_CN.UTF-8"
+export LC_NUMERIC=zh_CN.UTF-8
+export LC_TIME=zh_CN.UTF-8
+export LC_COLLATE="zh_CN.UTF-8"
+export LC_MONETARY=zh_CN.UTF-8
+export LC_MESSAGES="zh_CN.UTF-8"
+export LC_PAPER=zh_CN.UTF-8
+export LC_NAME=zh_CN.UTF-8
+export LC_ADDRESS=zh_CN.UTF-8
+export LC_TELEPHONE=zh_CN.UTF-8
+export LC_MEASUREMENT=zh_CN.UTF-8
+export LC_IDENTIFICATION=zh_CN.UTF-8
+
+bash tdx.sh
+EOF
     fi
 }
 
