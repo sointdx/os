@@ -58,7 +58,7 @@ EOF
 
 #设置文件的默认打开方式
 mkdir -p /etc/skel/.local/share/applications
-cp ./files/mimeapps.list $HOME/.local/share/applications/
+cp ./files/mimeapps.list /etc/skel/.local/share/applications/
 
 #光盘刻录
 p=`pwd`
