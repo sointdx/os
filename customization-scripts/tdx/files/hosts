@@ -709,6 +709,9 @@
 127.0.0.1 zsr01.world.edoors.com
 127.0.0.1 zsyy8964.world.edoors.com
 127.0.0.1 media4.minghui.org
+127.0.0.1 media5.minghui.org
+127.0.0.1 media6.minghui.org
+127.0.0.1 media7.minghui.org
 ::1 64culture.com
 ::1 64memo.com
 ::1 64tianwang.com
@@ -1420,3 +1423,6 @@
 ::1 zsr01.world.edoors.com
 ::1 zsyy8964.world.edoors.com
 ::1 media4.minghui.org
+::1 media5.minghui.org
+::1 media6.minghui.org
+::1 media7.minghui.org
