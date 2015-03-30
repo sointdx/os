@@ -6,3 +6,6 @@ remaster-iso/
 remaster-new-files/
 remaster-root-home/
 remaster-root/
+customization-scripts/customize
+customization-scripts/customize_iso
+customization-scripts/gui.sh
