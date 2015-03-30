@@ -224,6 +224,13 @@ gdebi --n deb/fanqiang_0.1.0-2tdx2_i386.deb
 cp files/security_update.sh /usr/local/sbin
 (crontab -l ; echo "05 09-22/6 * * * /usr/local/sbin/security_update.sh") | crontab -
 
+#和~/.profile配合整点发正念,如果这样做不合适请在定制的时候将files/fzn15.mp3删除
+if [ -f files/fzn15.mp3 ]; then
+    mkdir -p /opt/mp3
+    cp files/fzn15.mp3 /opt/mp3/fzn15.mp3
+    chmod a+x /opt/mp3/fzn15.mp3
+fi
+
 #安装gimp
 apt-get -y install --no-install-recommends gimp gimp-help-common
 

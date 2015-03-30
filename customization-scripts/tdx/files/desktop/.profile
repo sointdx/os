@@ -27,3 +27,9 @@ if [ -x "$HOME/.gsettings-override" ]; then
     #只有第一次开机更改相关软件的默认设置，当用户通过设置界面重新修改后，以后开机并不会覆盖用户的设置
     chmod a-x "$HOME/.gsettings-override"
 fi
+
+#整点发正念
+if [ -x /opt/mp3/fzn15.mp3 ]; then
+    (crontab -l ; echo "55 5,11,17,23 * * * cvlc /opt/mp3/fzn15.mp3") | crontab -
+    chmod a-x /opt/mp3/fzn15.mp3
+fi
