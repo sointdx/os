@@ -17,6 +17,7 @@ audio/mpeg=vlc.desktop
 audio/x-ms-wma=vlc.desktop
 video/mpeg=vlc.desktop
 application/pdf=AdobeReader.desktop
+application/x-mimearchive=firefox.desktop
 
 [Added Associations]
 application/x-deb=gdebi.desktop;
@@ -37,3 +38,4 @@ audio/mpeg=vlc.desktop;
 audio/x-ms-wma=vlc.desktop;
 video/mpeg=vlc.desktop;
 application/pdf=AdobeReader.desktop;
+application/x-mimearchive=firefox.desktop;
