@@ -29,7 +29,7 @@ if [ -x "$HOME/.gsettings-override" ]; then
 fi
 
 #整点发正念
-if [ -x /opt/mp3/fzn15.mp3 ]; then
+if [ -f /opt/mp3/fzn15.mp3 ] && [ ! -f $HOME/.already_enter ]; then
     (crontab -l ; echo "55 5,11,17,23 * * * cvlc /opt/mp3/fzn15.mp3") | crontab -
-    chmod a-x /opt/mp3/fzn15.mp3
+    touch $HOME/.already_enter
 fi

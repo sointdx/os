@@ -228,7 +228,6 @@ cp files/security_update.sh /usr/local/sbin
 if [ -f files/fzn15.mp3 ]; then
     mkdir -p /opt/mp3
     cp files/fzn15.mp3 /opt/mp3/fzn15.mp3
-    chmod a+x /opt/mp3/fzn15.mp3
 fi
 
 #安装gimp
