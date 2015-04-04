@@ -1,6 +1,6 @@
 #### 一、下载原版ubuntu系统
 
-点[下载地址](http://releases.ubuntu.com/14.04/ubuntu-14.04.1-desktop-i386.iso "原版镜像下载地址")即可下载，下载后检查一下MD5是否为`a4fc15313ef2a516bfbf83ce44281535`并复制到用户主目录 
+点[下载地址](http://releases.ubuntu.com/14.04/ubuntu-14.04.2-desktop-i386.iso "原版镜像下载地址")即可下载，下载后检查一下MD5是否为`a8a14f1f92c1ef35dae4966a2ae1a264`并复制到用户主目录 
 
 #### 二、下载定制脚本及其需要的文件
 
