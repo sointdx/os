@@ -9,6 +9,12 @@
 
 apt-get -y purge --auto-remove aisleriot gnome-sudoku gnomine
 
+#Canonical改变了依赖关系，系统不能启动
+#~iibus~dinput \
+#~icompiz \
+#~iaccount-plugin \
+#~ignome-accessibility-themes \
+
 #https://tiandixing.org/viewtopic.php?f=83&t=124748&view=unread#p709763
 #~isamba ~i~Psamba \
 apt-get -y install aptitude
@@ -24,12 +30,8 @@ aptitude -y purge \
 ~izeitgeist ~iactivity-log-manager \
 ~ioverlay-scrollbar \
 ~iunity-lens ~iunity-scope \
-~iibus~dinput \
-~icompiz \
-~ignome-accessibility-themes \
-~itango-icon-theme \
 ~ifriends~dsocial \
-~iaccount-plugin \
+~itango-icon-theme \
 ~ibaobab
 
 #the above ~izeitgeist unintentionally removed gedit.  get it back.
