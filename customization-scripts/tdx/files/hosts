@@ -712,6 +712,9 @@
 127.0.0.1 media5.minghui.org
 127.0.0.1 media6.minghui.org
 127.0.0.1 media7.minghui.org
+127.0.0.1 gb.falundafa.org
+127.0.0.1 big5.falundafa.org
+127.0.0.1 searchjw.minghui.org
 ::1 64culture.com
 ::1 64memo.com
 ::1 64tianwang.com
@@ -1426,3 +1429,6 @@
 ::1 media5.minghui.org
 ::1 media6.minghui.org
 ::1 media7.minghui.org
+::1 gb.falundafa.org
+::1 big5.falundafa.org
+::1 searchjw.minghui.org
