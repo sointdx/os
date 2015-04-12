@@ -174,6 +174,8 @@ cp $WD_DIR/files/vlcrc /etc/skel/.config/vlc/vlcrc
 
 #安装fcitx拼音、双拼和五笔
 apt-get -y install fcitx-pinyin fcitx-table-wubi
+#安装手写识别软件Tegaki
+apt-get -y install python-tegaki python-tegaki-gtk tegaki-recognize tegaki-zinnia-simplified-chinese tegaki-zinnia-traditional-chinese
 
 #安装和汉化gpa
 apt-get -y install gpa
