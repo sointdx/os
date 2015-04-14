@@ -135,8 +135,10 @@ regenerate() {
         mount ${TMP_DIR}/remaster-new-files/livecd.iso /mnt/old
         echo "正在重新制作镜像使系统支持没有物理地址扩展功能的电脑..."
     else
+        rm -rf /mnt/old
+        rm -rf /mnt/old
         echo "重新制作失败"
-        echo "请将源镜像复制到${TMP_DIR}/customization-scripts/remaster-iso/livecd.iso"
+        echo "请将源镜像复制到${TMP_DIR}/remaster-new-files/livecd.iso"
         exit
     fi
 
@@ -145,6 +147,10 @@ regenerate() {
     cp -rp /mnt/old/.disk /mnt/new
     #支持non-pae的电脑
     cp -f ${TMP_DIR}/extra-files/txt.cfg /mnt/new/isolinux
+
+    #安装完系统不自动卸载gparted
+    line_num=`awk '$1=="gparted" {print NR}' /mnt/new/casper/filesystem.manifest-remove`
+    sed -i "${line_num}d" /mnt/new/casper/filesystem.manifest-remove
 
     #重新制作镜像
     mkisofs -D -r -V "Ubuntu14.04.1" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ${HOME}/${ISO_NONPAE} /mnt/new
