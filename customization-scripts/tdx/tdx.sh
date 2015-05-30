@@ -37,6 +37,12 @@ apt-get update
 #卸载不需要的软件
 bash files/uninstall.sh
 
+# not to upgrade libpam-systemd in chroot
+# https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1325142  #9
+# fix:/etc/init.d/systemd-logind not found
+echo "libpam-systemd hold"|dpkg --set-selections
+
+# 升级系统
 apt-get -y dist-upgrade
 
 #安装gdebi和synaptic，方便会员以后安装软件，用gdebi安装deb文件可以自动解决依赖问题，定制脚本后面会用到
