@@ -225,7 +225,7 @@ cp files/wine/mfc42.dll /etc/skel/.wine/drive_c/windows/system32/
 # install depends of fanqiang package
 apt-get -y install libnotify-bin coreutils procps psmisc firefox findutils net-tools unzip
 # unpack this deb file, do not configure it and run postinst script
-dpkg --unpack fanqiang_0.1.0-2tdx2_all.deb
+dpkg --unpack deb/fanqiang_0.1.0-2tdx2_all.deb
 
 
 # for automatic security upgrade
