@@ -162,7 +162,7 @@ regenerate() {
     sed -i "${line_num}d" /mnt/new/casper/filesystem.manifest-remove
 
     #重新制作镜像
-    mkisofs -D -r -V "Ubuntu14.04.1" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ${HOME}/${ISO_NONPAE} /mnt/new
+    mkisofs -D -r -V "tdxos2.0" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ${HOME}/${ISO_NONPAE} /mnt/new
 
     rm -rf /mnt/new
     umount /mnt/old && rm -rf /mnt/old
