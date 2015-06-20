@@ -223,6 +223,9 @@ cp files/wine/mfc42.dll /etc/skel/.wine/drive_c/windows/system32/
 # 安装翻墙软件的启动脚本
 gdebi --n deb/fanqiang_0.1.0-2tdx2_all.deb
 
+# 安装佳能打印机依赖的libtiff4,ubuntu14.04的源中没有这个包
+gdebi --n libtiff4_3.9.5-2ubuntu1.8_${ARCH}.deb
+
 # for automatic security upgrade
 ###echo 'Acquire::http::proxy "http://127.0.0.1:8580";' | tee -a /etc/apt/apt.conf.d/111proxy
 ###echo 'Acquire::https::proxy "http://127.0.0.1:8580";' | tee -a /etc/apt/apt.conf.d/111proxy
