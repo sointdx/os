@@ -221,7 +221,11 @@ echo 'export WINEDLLOVERRIDES="mscoree,mshtml="' | tee /etc/profile.d/wine-no-ge
 mkdir -p /etc/skel/.wine/drive_c/windows/system32/
 cp files/wine/mfc42.dll /etc/skel/.wine/drive_c/windows/system32/
 # 安装翻墙软件的启动脚本
-gdebi --n deb/fanqiang_0.1.0-2tdx2_all.deb
+# gdebi --n deb/fanqiang_0.1.0-2tdx2_all.deb
+# install depends of fanqiang package
+apt-get -y install libnotify-bin coreutils procps psmisc firefox findutils net-tools unzip
+# unpack this deb file, do not configure it and run postinst script
+dpkg --unpack fanqiang_0.1.0-2tdx2_all.deb
 
 
 # for automatic security upgrade
