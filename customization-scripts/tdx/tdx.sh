@@ -83,8 +83,8 @@ cd $p
 # https://tiandixing.org/viewtopic.php?f=83&t=126432#p711511
 #apt-get install -y --no-install-recommends language-pack-kde-zh-hans
 #安装多刻录机软件
-gdebi --n deb/cdrecord_3.01a22-0ubuntu1~trusty~cdrtoolsppa4_i386.deb
-gdebi --n deb/cdrg_1.1.2-0tdx1_i386.deb
+gdebi --n deb/cdrecord_3.01a22-0ubuntu1~trusty~cdrtoolsppa4_${ARCH}.deb
+gdebi --n deb/cdrg_1.1.2-0tdx1_${ARCH}.deb
 
 #安装linuxmint的图标主题,图标主题和定制桌面有关系，定制桌面时用的是Mint-X
 gdebi --n deb/mint-x-icons_1.1.8_all.deb
@@ -96,7 +96,7 @@ gtk-update-icon-cache /usr/share/icons/Mint-X-Dark/
 gdebi --n deb/mintstick_1.2.1_all.deb
 
 #安装truecrypt
-gdebi --n deb/truecrypt_7.1a-3tdx1_i386.deb
+gdebi --n deb/truecrypt_7.1a-3tdx1_${ARCH}.deb
 #设置truecrypt
 #https://www.tiandixing.org/viewtopic.php?f=83&t=135512&start=100#p775098
 mkdir -p /etc/skel/.TrueCrypt
@@ -143,7 +143,7 @@ apt-get -y install glabels
 #安装chm查看软件http://tiandixing.org/viewtopic.php?f=86&t=126006&p=708694#p708895
 #apt-get -y install --no-install-recommends chmsee
 #https://tiandixing.org/viewtopic.php?f=86&t=157467&p=885741#p885741
-gdebi --n deb/chmsee_1.3.0-2ubuntu2_i386.deb
+gdebi --n deb/chmsee_1.3.0-2ubuntu2_${ARCH}.deb
 
 #timezone
 echo "Asia/Shanghai" | tee /etc/timezone
@@ -152,10 +152,11 @@ sed -i 's/UTC=yes/UTC=no/' /etc/default/rcS
 
 # 安装最新的flash
 # http://tiandixing.org/viewtopic.php?f=83&t=125035&p=703877&hilit=flashplugin+installer#p703175
-if [ ! -f adobe-flashplugin_20150512.1-0trusty1_i386.deb ]; then
-    wget http://archive.canonical.com/pool/partner/a/adobe-flashplugin/adobe-flashplugin_20150512.1-0trusty1_i386.deb
+FLASHNAME=adobe-flashplugin_20150609.1-0trusty1_${ARCH}.deb
+if [ ! -f ${FLASHNAME} ]; then
+    wget http://archive.canonical.com/pool/partner/a/adobe-flashplugin/${FLASHNAME}
 fi
-dpkg -i adobe-flashplugin_11.2.202.440-0trusty1_i386.deb
+dpkg -i ${FLASHNAME}
 
 # Virtualbox
 apt-get -y install virtualbox
@@ -220,7 +221,7 @@ echo 'export WINEDLLOVERRIDES="mscoree,mshtml="' | tee /etc/profile.d/wine-no-ge
 mkdir -p /etc/skel/.wine/drive_c/windows/system32/
 cp files/wine/mfc42.dll /etc/skel/.wine/drive_c/windows/system32/
 # 安装翻墙软件的启动脚本
-gdebi --n deb/fanqiang_0.1.0-2tdx2_i386.deb
+gdebi --n deb/fanqiang_0.1.0-2tdx2_all.deb
 
 
 # for automatic security upgrade
@@ -249,13 +250,14 @@ apt-get -y install exfat-utils exfat-fuse
 
 # PDF 软件
 # https://tiandixing.org/viewtopic.php?f=83&t=122592#p702647
-if [ ! -f AdobeReader_chs-8.1.7-1.i386.deb ]; then
-    wget http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.7/chs/AdobeReader_chs-8.1.7-1.i386.deb
+AdobeReaderName=AdobeReader_chs-8.1.7-1.${ARCH}.deb
+if [ ! -f ${AdobeReaderName} ]; then
+    wget http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.7/chs/${AdobeReaderName}
 fi
 if [ ! -f FontPack81_cht_i486-linux.tar.gz ]; then
     wget ftp://ftp.adobe.com/pub/adobe/reader/unix/8.x/8.1.2/misc/FontPack81_cht_i486-linux.tar.gz
 fi
-dpkg -i AdobeReader_chs-8.1.7-1.i386.deb
+dpkg -i ${AdobeReaderName}
 tar -xzvf reader_prefs.tar.gz -C /etc/skel
 tar -xzvf FontPack81_cht_i486-linux.tar.gz -C /tmp/ && tar -xvf /tmp/CHTKIT/LANGCOM.TAR -C /opt/ && tar -xvf /tmp/CHTKIT/LANGCHT.TAR -C /opt/ && rm -r /tmp/CHTKIT
 #rm AdobeReader_chs-8.1.7-1.i386.deb FontPack81_cht_i486-linux.tar.gz
