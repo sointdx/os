@@ -327,4 +327,7 @@ cp files/rc.local /etc/rc.local
 #开机自动判断并创建swap分区
 mkdir -p /opt/tdx/
 cp files/create_swap.sh /opt/tdx/create_swap.sh
+
+# https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1325142  #9
+echo "libpam-systemd install"|dpkg --set-selections
 #!!!! this has to be put in the END!!! Otherwise will have wierd connection problems.
