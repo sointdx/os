@@ -188,6 +188,8 @@ apt-get -y install python-tegaki python-tegaki-gtk tegaki-recognize tegaki-zinni
 apt-get -y install gpa
 mkdir -p /usr/share/locale/zh_CN/LC_MESSAGES/
 cp files/gpa.mo /usr/share/locale/zh_CN/LC_MESSAGES/
+#configure gpg
+mkdir /etc/skel/.gnugp && cp files/gpg.conf /etc/skel/.gnupg/
 
 #安装备份软件deja-dup
 #https://www.tiandixing.org/viewtopic.php?f=83&t=166405&p=927744#p925410
