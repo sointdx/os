@@ -61,6 +61,8 @@ cat > /etc/lightdm/lightdm.conf.d/50-myconfig.conf << EOF
 allow-guest=false
 user-session=xfce
 EOF
+#https://tiandixing.org/viewtopic.php?f=83&t=165713&start=50#p1003656 
+cp files/Thunar.mo /usr/share/locale/zh_CN/LC_MESSAGES/
 
 #设置文件的默认打开方式
 mkdir -p /etc/skel/.local/share/applications
