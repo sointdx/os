@@ -19,17 +19,17 @@ git config --global http.proxy 'socks5://127.0.0.1:8580'
 git config --global https.proxy 'socks5://127.0.0.1:8580'
 ```
 
-用git取定制所需的文件，取完后会以目录os的形式存在与用户主目录中
+用git取定制所需的文件，取完后会以目录tdxos的形式存在与用户主目录中
 ```
-git clone https://github.com/sointdx/os.git
+git clone https://github.com/sointdx/tdxos.git
 ```
 
 #### 三、定制系统
 
-進入解压缩的文件夹（如果您是用git取的文件，需要進入主目录的os文件夹），第一次运行如下命令即可定制系统
+進入解压缩的文件夹（如果您是用git取的文件，需要進入主目录的tdxos文件夹），第一次运行如下命令即可定制系统
 ```
-sudo ./ubuntu.sh init
-sudo ./ubuntu.sh custom
+sudo ./tdxos.sh init
+sudo ./tdxos.sh custom
 ```
 
-以后每次修改完文件，输入命令`sudo ./ubuntu.sh custom` 即可定制
+以后每次修改完文件，输入命令`sudo ./tdxos.sh custom` 即可定制
