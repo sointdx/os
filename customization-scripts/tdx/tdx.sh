@@ -191,7 +191,13 @@ apt-get -y install gpa
 mkdir -p /usr/share/locale/zh_CN/LC_MESSAGES/
 cp files/gpa.mo /usr/share/locale/zh_CN/LC_MESSAGES/
 #configure gpg
-mkdir /etc/skel/.gnugp && cp files/gpg.conf /etc/skel/.gnupg/
+mkdir /etc/skel/.gnupg && cp files/gpg.conf /etc/skel/.gnupg/
+#import minghui public key
+gpg --import files/mh-public.asc
+#set Owner Trust:Ultimate
+echo 78F42E0091766B9CB569A28837159A40F8B5E914:6: | gpg --import-ownertrust
+test -f /root/.gnupg/pubring.gpg && cp /root/.gnupg/pubring.gpg /etc/skel/.gnupg
+test -f /root/.gnupg/trustdb.gpg && cp /root/.gnupg/trustdb.gpg /etc/skel/.gnupg
 
 #安装备份软件deja-dup
 #https://www.tiandixing.org/viewtopic.php?f=83&t=166405&p=927744#p925410
