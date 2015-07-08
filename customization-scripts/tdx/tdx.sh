@@ -23,7 +23,7 @@ export WD_DIR=/tmp/customization-scripts/tdx
 # 1.重要的服务器：用发行版默认的、security 
 # 2.当有要较新软件包才行能运作的服务器：用发行版默认的、 security、（backports 还是不适合） 
 # 3.一般个人桌面：用发行版默认的、 security、backports、update
-# 4.追求最新、能提供建议和反馈大虾：发行版默认的、 security、backports、update、proposed 全部用上！
+# 4.追求最新、能提供建议和反馈：发行版默认的、 security、backports、update、proposed 全部用上
 
 cat > /etc/apt/sources.list << EOF
 deb http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse
