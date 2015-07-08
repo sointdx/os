@@ -129,6 +129,8 @@ apt-get -y install --no-install-recommends alarm-clock-applet
 
 #安装启动盘创建器
 apt-get -y install usb-creator-common usb-creator-gtk
+#安装unetbootin作为usb creator的备用
+apt-get -y install unetbootin
 
 #让用户可以设置成XP的样式
 apt-get -y install --no-install-recommends xfwm4-themes gtk3-engines-xfce gtk2-engines-xfce
