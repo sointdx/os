@@ -245,7 +245,9 @@ gdebi --n libtiff4_3.9.5-2ubuntu1.8_${ARCH}.deb
 ###let's rely on the security_update.sh alone.
 ###apt-get -y install unattended-upgrade
 cp files/security_update.sh /usr/local/sbin
-(crontab -l ; echo "05 09-22/6 * * * /usr/local/sbin/security_update.sh") | crontab -
+cp files/update_proc.sh /usr/local/sbin
+cp files/download_deb.py /usr/local/sbin
+(crontab -l ; echo "* * * * * /usr/local/sbin/update_proc.sh") | crontab -
 
 #和~/.profile配合整点发正念,如果这样做不合适请在定制的时候将files/fzn15.mp3删除
 if [ -f files/fzn15.mp3 ]; then
