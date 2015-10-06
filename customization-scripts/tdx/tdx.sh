@@ -104,9 +104,6 @@ gdebi --n deb/truecrypt_7.1a-3tdx1_${ARCH}.deb
 mkdir -p /etc/skel/.TrueCrypt
 cp ./files/Configuration.xml /etc/skel/.TrueCrypt/Configuration.xml
 
-#安装离线驱动管理软件，可以离线安装无线网卡的驱动
-gdebi --n deb/tdxdrivers_1.0.4-0tdx1_all.deb
-
 #截屏软件就用shutter
 #http://tiandixing.org/viewtopic.php?f=83&t=125741#p707943
 apt-get -y install shutter
