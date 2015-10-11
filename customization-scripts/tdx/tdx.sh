@@ -160,19 +160,17 @@ fi
 dpkg -i ${FLASHNAME}
 
 # Virtualbox
-apt-get -y install virtualbox
-#只用上面一条命令定制的系统virtualbox不能用，执行以下命令就可以成功
-apt-get -y install virtualbox-qt
-apt-get -y install virtualbox-dkms
-apt-get -y install --reinstall virtualbox-dkms
-#安装guest additions iso image for virtualbox
-apt-get -y install virtualbox-guest-additions-iso
+# https://www.virtualbox.org/wiki/Linux_Downloads
+echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" > /etc/apt/sources.list.d/virtualbox.list
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+apt-get update && apt-get -y install virtualbox-5.0 dkms
 
 #安装virtualbox增强功能包
-if [ ! -f Oracle_VM_VirtualBox_Extension_Pack-4.3.10-93012.vbox-extpack ]; then
-    wget http://download.virtualbox.org/virtualbox/4.3.10/Oracle_VM_VirtualBox_Extension_Pack-4.3.10-93012.vbox-extpack
+VIRTUALBOX_EXTENSION=Oracle_VM_VirtualBox_Extension_Pack-5.0.6-103037.vbox-extpack
+if [ ! -f ${VIRTUALBOX_EXTENSION} ]; then
+    wget http://download.virtualbox.org/virtualbox/5.0.6/${VIRTUALBOX_EXTENSION}
 fi
-VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.3.10-93012.vbox-extpack
+VBoxManage extpack install ${VIRTUALBOX_EXTENSION}
 
 # 视频播放器
 apt-get install -y --no-install-recommends vlc
