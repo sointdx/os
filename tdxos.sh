@@ -6,8 +6,8 @@ TMP_DIR=`cd ${TMP_DIR};pwd`
 OPERATE=$1
 # 32位镜像名字必须要包含i386字样，64位镜像名字不能包含i386字样，
 # 后面以此判断安装不同的软件包
-ISO_NAME="ubuntu-14.04.2-desktop-i386.iso"
-ISO_NONPAE="ubuntu-14.04.2-desktop-i386-custom.iso"
+ISO_NAME="ubuntu-14.04.3-desktop-i386.iso"
+ISO_NONPAE="ubuntu-14.04.3-desktop-i386-custom.iso"
 
 # 定义ARCH变量
 if ( echo ${ISO_NAME} | grep -i "i386" ); then
