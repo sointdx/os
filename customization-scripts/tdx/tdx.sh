@@ -153,7 +153,7 @@ sed -i 's/UTC=yes/UTC=no/' /etc/default/rcS
 
 # 安装最新的flash
 # http://tiandixing.org/viewtopic.php?f=83&t=125035&p=703877&hilit=flashplugin+installer#p703175
-FLASHNAME=adobe-flashplugin_20150609.1-0trusty1_${ARCH}.deb
+FLASHNAME=adobe-flashplugin_20150921.1-0trusty1_${ARCH}.deb
 if [ ! -f ${FLASHNAME} ]; then
     wget http://archive.canonical.com/pool/partner/a/adobe-flashplugin/${FLASHNAME}
 fi
