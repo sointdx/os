@@ -159,6 +159,9 @@ if [ ! -f ${FLASHNAME} ]; then
 fi
 dpkg -i ${FLASHNAME}
 
+#needed by dkms when registerng virtualbox kernel module
+apt-get -y install linux-headers-$(uname -r)
+
 # Virtualbox
 # https://www.virtualbox.org/wiki/Linux_Downloads
 echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" > /etc/apt/sources.list.d/virtualbox.list

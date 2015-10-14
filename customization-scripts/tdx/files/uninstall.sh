@@ -34,6 +34,8 @@ aptitude -y purge \
 ~itango-icon-theme \
 ~ibaobab
 
+apt-get -y purge ibus-pinyin
+
 #the above ~izeitgeist unintentionally removed gedit.  get it back.
 apt-get -y install --no-install-recommends gedit cabextract
 
