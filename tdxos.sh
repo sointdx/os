@@ -21,7 +21,7 @@ fi
 check_user() {
     if [ $UID != 0 ];then
         echo "请用sudo运行本脚本，使用类似如下的命令："
-        echo -e "\033[34m  sudo\033[0m ./ubuntu.sh custom"
+        echo -e "\033[34m  sudo\033[0m ./tdxos.sh custom"
         exit 1
     fi
 }
@@ -30,7 +30,7 @@ check_user() {
 check_param() {
     #提示命令后面需要输入操作
     if [ -z $OPERATE ]; then
-        echo -e "请在命令后输入参数：init或custom或clean,例如：sudo ./ubuntu.sh\033[34m init\033[0m " 
+        echo -e "请在命令后输入参数：init或custom或clean,例如：sudo ./tdxos.sh\033[34m init\033[0m " 
         echo "  1、init:初始化环境，在同一个系统中只需执行一次，以后就不需要执行了 "
         echo "  2、custom:开始定制系统"
         echo "  3、nonpae:使镜像支持没有物理地址扩展功能的电脑"
@@ -48,7 +48,7 @@ check_param() {
 #检查是否安装了需要的软件
 check_depend() {
     if [ ! -x /usr/bin/uck-remaster ] && [ $OPERATE != "init" ]; then
-        echo -e "请先执行命令sudo ./ubuntu.sh\033[34m init\033[0m"
+        echo -e "请先执行命令sudo ./tdxos.sh\033[34m init\033[0m"
         exit
     fi
 }
@@ -186,7 +186,7 @@ elif [ "$1" == "clean" ]; then
     clean
 else
     echo -e "请在命令后输入参数：\033[34minit\033[0m或\033[34mcustom\033[0m或\033[34mnonpae\033[0m或\033[34mclean\033[0m"
-    echo -e "例如：sudo ./ubuntu.sh init" 
+    echo -e "例如：sudo ./tdxos.sh init" 
     echo "  1、init:初始化环境，在同一个系统中只需执行一次，以后就不需要执行了 "
     echo "  2、custom:开始定制系统"
     echo "  3、nonpae:使镜像支持没有物理地址扩展功能的电脑"
