@@ -1,32 +1,24 @@
-#### 一、下载原版ubuntu系统
+##### 一、下载原版ubuntu系统
 
-点[下载地址](http://releases.ubuntu.com/14.04/ubuntu-14.04.2-desktop-i386.iso "原版镜像下载地址")即可下载，下载后检查一下MD5是否为`a8a14f1f92c1ef35dae4966a2ae1a264`并复制到用户主目录 
+点[下载地址](http://releases.ubuntu.com/trusty/ubuntu-14.04.3-desktop-i386.iso "原版镜像下载地址")即可下载，下载后检查一下MD5是否为`0bc058cdc75fb75d4922c7c74c4cd6b1`并复制到用户主目录 
 
-#### 二、下载定制脚本及其需要的文件
+##### 二、下载定制脚本及其需要的文件
 
-这里有两种方法下载这些文件：
-
-1、翻墙后，可以通过点击本页面右边的**Download ZIP**按钮下载这些文件，下载后是一个压缩文件，需要解压缩。
-
-2、用git下载所需文件。先安装git
+用git下载所需文件。先安装git
 ```
 sudo apt-get -y install git
 ```
 
-在用git取文件之前您可能需要先运行下面两条命令设置git经过自由门代理(*可选*，**推荐**，这种方式没有设置DNS的代理)
-```
-git config --global http.proxy 'socks5://127.0.0.1:8580'
-git config --global https.proxy 'socks5://127.0.0.1:8580'
-```
-
-用git取定制所需的文件，取完后会以目录tdxos的形式存在与用户主目录中
+用git取定制所需的文件，取完后会以目录tdxos的形式存在于用户主目录中
 ```
 git clone https://github.com/sointdx/tdxos.git
 ```
 
-#### 三、定制系统
+##### 三、定制系统
 
-進入解压缩的文件夹（如果您是用git取的文件，需要進入主目录的tdxos文件夹），第一次运行如下命令即可定制系统
+**注意**：整个定制过程要保证所有的联网请求都经过代理，如果实现不了请不要定制！
+
+`cd tdxos`，第一次运行如下命令即可定制系统
 ```
 sudo ./tdxos.sh init
 sudo ./tdxos.sh custom
