@@ -163,13 +163,13 @@ dpkg -i ${FLASHNAME}
 apt-get -y install linux-headers-$(uname -r)
 
 # Virtualbox
--apt-get -y install virtualbox
--#只用上面一条命令定制的系统virtualbox不能用，执行以下命令就可以成功
--apt-get -y install virtualbox-qt
--apt-get -y install virtualbox-dkms
--apt-get -y install --reinstall virtualbox-dkms
--#安装guest additions iso image for virtualbox
--apt-get -y install virtualbox-guest-additions-iso
+apt-get -y install virtualbox
+#只用上面一条命令定制的系统virtualbox不能用，执行以下命令就可以成功
+apt-get -y install virtualbox-qt
+apt-get -y install virtualbox-dkms
+apt-get -y install --reinstall virtualbox-dkms
+#安装guest additions iso image for virtualbox
+apt-get -y install virtualbox-guest-additions-iso
 
 #安装virtualbox增强功能包
 VIRTUALBOX_EXTENSION=Oracle_VM_VirtualBox_Extension_Pack-4.3.34-104062.vbox-extpack
