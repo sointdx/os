@@ -153,7 +153,7 @@ sed -i 's/UTC=yes/UTC=no/' /etc/default/rcS
 
 # 安装最新的flash
 # http://tiandixing.org/viewtopic.php?f=83&t=125035&p=703877&hilit=flashplugin+installer#p703175
-FLASHNAME=adobe-flashplugin_20150921.1-0trusty1_${ARCH}.deb
+FLASHNAME=adobe-flashplugin_20151228.1-0ubuntu1_${ARCH}.deb
 if [ ! -f ${FLASHNAME} ]; then
     wget http://archive.canonical.com/pool/partner/a/adobe-flashplugin/${FLASHNAME}
 fi
@@ -237,7 +237,7 @@ cp files/wine/mfc42.dll /etc/skel/.wine/drive_c/windows/system32/
 gdebi --n deb/fanqiang_0.1.0-2tdx2_all.deb
 
 # 安装佳能打印机依赖的libtiff4,ubuntu14.04的源中没有这个包
-gdebi --n libtiff4_3.9.5-2ubuntu1.8_${ARCH}.deb
+gdebi --n deb/libtiff4_3.9.5-2ubuntu1.8_${ARCH}.deb
 
 # for automatic security upgrade
 ###echo 'Acquire::http::proxy "http://127.0.0.1:8580";' | tee -a /etc/apt/apt.conf.d/111proxy
