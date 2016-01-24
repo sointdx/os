@@ -327,7 +327,7 @@ iptables -A INPUT -i vboxnet0 -s 192.168.188.0/30 -p tcp -j ACCEPT
 iptables-save > /etc/iptables.saved
 #echo "pre-up iptables-restore < /etc/iptables.saved" >> /etc/network/interfaces
 #apt-get -y dist-upgrade
-apt-get -y install libreoffice-help-zh-cn hunspell-en-ca sunpinyin-data gimp-help-en kde-l10n-engb libreoffice-l10n-en-gb ibus-sunpinyin fonts-arphic-uming libreoffice-l10n-zh-cn mythes-en-au myspell-en-au ibus-table fonts-arphic-ukai libreoffice-l10n-en-za libsunpinyin3 myspell-en-gb ibus-table-wubi hyphen-en-us libreoffice-help-en-gb mythes-en-us wbritish myspell-en-za openoffice.org-hyphenation
+apt-get -y install libreoffice-help-zh-cn hunspell-en-ca gimp-help-en kde-l10n-engb libreoffice-l10n-en-gb fonts-arphic-uming libreoffice-l10n-zh-cn mythes-en-au myspell-en-au fonts-arphic-ukai libreoffice-l10n-en-za myspell-en-gb hyphen-en-us libreoffice-help-en-gb mythes-en-us wbritish myspell-en-za openoffice.org-hyphenation
 
 ########### NOTHING should be put below this line!!! Otherwise will have wierd connection problems.
 # 防直连海外正义网站
