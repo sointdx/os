@@ -267,16 +267,17 @@ apt-get -y install exfat-utils exfat-fuse
 
 # PDF 软件
 # https://tiandixing.org/viewtopic.php?f=83&t=122592#p702647
-AdobeReaderName=AdobeReader_chs-8.1.7-1.${ARCH}.deb
-if [ ! -f ${AdobeReaderName} ]; then
-    wget http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.7/chs/${AdobeReaderName}
+# 没有找到64位的软件，64位系统也安装32位的软件
+AdobeReaderName=AdobeReader_chs-8.1.7-1.i386.deb
+if [ ! -f deb/${AdobeReaderName} ]; then
+    wget http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.7/chs/${AdobeReaderName} -P deb/
 fi
-if [ ! -f FontPack81_cht_i486-linux.tar.gz ]; then
-    wget ftp://ftp.adobe.com/pub/adobe/reader/unix/8.x/8.1.2/misc/FontPack81_cht_i486-linux.tar.gz
+if [ ! -f files/FontPack81_cht_i486-linux.tar.gz ]; then
+    wget ftp://ftp.adobe.com/pub/adobe/reader/unix/8.x/8.1.2/misc/FontPack81_cht_i486-linux.tar.gz -P files/
 fi
-dpkg -i ${AdobeReaderName}
-tar -xzvf reader_prefs.tar.gz -C /etc/skel
-tar -xzvf FontPack81_cht_i486-linux.tar.gz -C /tmp/ && tar -xvf /tmp/CHTKIT/LANGCOM.TAR -C /opt/ && tar -xvf /tmp/CHTKIT/LANGCHT.TAR -C /opt/ && rm -r /tmp/CHTKIT
+gdebi --n deb/${AdobeReaderName}
+tar -xzvf files/reader_prefs.tar.gz -C /etc/skel
+tar -xzvf files/FontPack81_cht_i486-linux.tar.gz -C /tmp/ && tar -xvf /tmp/CHTKIT/LANGCOM.TAR -C /opt/ && tar -xvf /tmp/CHTKIT/LANGCHT.TAR -C /opt/ && rm -r /tmp/CHTKIT
 #rm AdobeReader_chs-8.1.7-1.i386.deb FontPack81_cht_i486-linux.tar.gz
 
 # https://tiandixing.org/viewtopic.php?f=83&t=125949&p=711612#p711612
